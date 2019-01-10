@@ -42,6 +42,10 @@
   
 
 </head>
+
+  <link rel="stylesheet" href="/lib/gitalk/gitalk.css">
+  <script src="/lib/gitalk/gitalk.min.js"></script>
+
 </html>
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -376,6 +380,23 @@
 
   
 
+
+
+  <div class="gitalk">
+    <div id="gitalk-container"></div>
+    <script type="text/javascript">
+        const gitalk = new Gitalk({
+            clientID: '7237917557017a196a1f',
+            clientSecret: 'f776ad7b502dc44d2349ade91be8265de0f9f344',
+            repo: 'slp121.github.io',
+            owner: 'slp121',
+            admin: ['slp121'],
+            id: location.pathname,      // Ensure uniqueness and length less than 50
+            distractionFreeMode: false  // Facebook-like distraction free mode
+        })
+        gitalk.render('gitalk-container')
+    </script>
+</div>
 
           </div>
         </div>
